@@ -9,7 +9,7 @@
 	| # | Назва страви | К-cть | Ціна | Сумма |
 	|:--|:-------------|:-----:|:----:|:------:|
 	@foreach ($order->products as $product)
-		|{{$loop->iteration}}|{{ $product->title }}| {{$product->count}}|{{ $product->price }} грн. |{{$product->price * $product->count}} грн.|
+		|{{$loop->iteration}}|{{ $product->title }}| {{$product->pivot->count}}|{{ $product->price }} грн. |{{$product->price * $product->pivot->count}} грн.|
 	@endforeach
    @endcomponent
 	@component('mail::panel')
