@@ -47,6 +47,12 @@ class CategoryTableSeeder extends Seeder
 				'image' => 'categories/05.jpg',
 				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
 			],
+			[
+				'code' => 'soup',
+				'name' => 'Супи',
+				'image' => 'categories/08.jpeg',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
 		]);
 	}
 }

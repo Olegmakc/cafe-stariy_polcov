@@ -28,6 +28,24 @@ class ProductTableSeeder extends Seeder
 			],
 			[
 				'category_id' => '1',
+				'title' => 'Млинці "Фантазія"',
+				'description' => 'сир філадельфія, сьомга слабосолона, яйця, шпинат  ',
+				'weight' => '300',
+				'photo' => 'products/26.jpg',
+				'price' => '130',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '1',
+				'title' => 'Млинці з телятиною',
+				'description' => 'Подаються зі сметаною.',
+				'weight' => '230',
+				'photo' => 'products/30.jpg',
+				'price' => '90',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '1',
 				'title' => 'Ньокки з грибами',
 				'description' => 'Беконом під рожевим соусом',
 				'weight' => '180',
@@ -46,11 +64,29 @@ class ProductTableSeeder extends Seeder
 			],
 			[
 				'category_id' => '1',
+				'title' => 'Сирна тарілка',
+				'description' => 	'дорблю, пармезан, моцарела, королівський, мед, горіх грецький',
+				'weight' => '150',
+				'photo' => 'products/25.jpg',
+				'price' => '130',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '1',
 				'title' => 'Домашня паста з лососем',
 				'description' => 	'М\'ягкий шпинат та вершковий соус альфредо',
 				'weight' => '280',
 				'photo' => 'products/04.jpg',
 				'price' => '150',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '1',
+				'title' => 'Вареники з м\'ясом',
+				'description' => 'З соковитою м’ясною начинкою в тонкому тісті. Подаються зі сметаною',
+				'weight' => '230',
+				'photo' => 'products/29.jpeg',
+				'price' => '85',
 				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
 			],
 			[
@@ -110,11 +146,11 @@ class ProductTableSeeder extends Seeder
 
 			[
 				'category_id' => '2',
-				'title' => 'Салат цезар з курячим шніцелем',
-				'description' => 'Ромен, томат черрі, курячій шніцель, пармезан, соус  айолі-цезар',
+				'title' => 'Цезар з куркою',
+				'description' => 'мікс салатів, томати, грудка курчати, соус Цезар, крутони, пармезан',
 				'weight' => '220',
-				'photo' => 'products/18.jpeg',
-				'price' => '135',
+				'photo' => 'products/18.jpg',
+				'price' => '95',
 				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
 			],
 			[
@@ -124,6 +160,15 @@ class ProductTableSeeder extends Seeder
 				'weight' => '190',
 				'photo' => 'products/08.jpg',
 				'price' => '248',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '3',
+				'title' => 'Шашлик зі свинини',
+				'description' => 'шашлик замаринований за фірмовим рецептом',
+				'weight' => '100',
+				'photo' => 'products/27.jpg',
+				'price' => '60',
 				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
 			],
 			[
@@ -234,6 +279,34 @@ class ProductTableSeeder extends Seeder
 				'price' => '35',
 				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
 			],
+			[
+				'category_id' => '6',
+				'title' => 'Бульйон',
+				'description' => "бульйон мікс з локшиною, куркою, шпинатом та перепелиним яйцем",
+				'weight' => '350',
+				'photo' => 'products/28.jpg',
+				'price' => '78',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '6',
+				'title' => 'Борщ з свинними ребрами та квасолею',
+				'description' => "з підсмаженими чорним хлібом та смальцем",
+				'weight' => '450',
+				'photo' => 'products/32.jpg',
+				'price' => '60',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+			[
+				'category_id' => '6',
+				'title' => 'Курячий бульйон',
+				'description' => "з креп-ролами та перепелиними яйцями",
+				'weight' => '350',
+				'photo' => 'products/33.jpg',
+				'price' => '70',
+				'created_at' =>  Carbon::now()->format('Y-m-d H:i:s'),
+			],
+
 		]);
 	}
 }
