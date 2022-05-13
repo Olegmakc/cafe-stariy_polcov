@@ -31,7 +31,6 @@ class StoreContactRequest extends FormRequest
 			'email' => 'bail|required|email',
 			'subject' => 'required',
 			'message' => 'required',
-
 		];
 	}
 	/**
@@ -52,10 +51,10 @@ class StoreContactRequest extends FormRequest
 	public function attributes()
 	{
 		return [
-			'name' => 'iм\'я',
-			'email' => 'електронна адреса',
-			'subject' => 'тема повідомлення ',
-			'message' => 'повідомлення',
+			'name' => 'Ім\'я',
+			'email' => 'Eлектронна адреса',
+			'subject' => 'Тема повідомлення ',
+			'message' => 'Повідомлення',
 		];
 	}
 }

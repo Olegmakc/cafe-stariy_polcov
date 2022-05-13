@@ -51,7 +51,6 @@ class Basket
 		if ($this->order->products->contains($product)) {
 			$pivotRow = $this->order->products->where('id', $product->id)->first();
 			if ($pivotRow->count < 2) {
-				// dd($this->order->products);
 				$this->order->products->pull($product->id);
 			} else {
 				$pivotRow->count--;
@@ -61,11 +60,7 @@ class Basket
 	public function removeProductAll(Product $product)
 	{
 		if ($this->order->products->contains($product->id)) {
-			// 	$PivotCount = $pivotRow->count;
-			// 	for ($i = 0; $i < $PivotCount; $i++) {
-			// 		Order::changeFullSum(-$product->price);
-			// 	}
-			// 	$this->order->products()->detach($product->id);
+			$this->order->products->pull($product->id);
 		}
 		return redirect()->route('basket');
 	}

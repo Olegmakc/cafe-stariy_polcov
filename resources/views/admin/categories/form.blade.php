@@ -25,25 +25,19 @@
                             <input type="text" name="code" @error('code')  @enderror id=""
                                 value="@isset($category) {{ $category->code }}@else {{ old('code') }} @endisset">
                         </div>
-                        @error('code')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'code'])
                         <div class="category-form__row">
                             <label for="name">Назва категорії:</label>
                             <input type="text" name="name" id="name" @error('name')  @enderror
                                 value="@isset($category) {{ $category->name }}@else {{ old('name') }} @endisset">
                         </div>
-                        @error('name')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'name'])
                         <div class="category-form__row">
                             <label for="image" class="file-label">Зображення категорії:</label>
                             <input type="file" class="file" name="image" @error('image')  @enderror
                                 value="{{ old('image') }}">
                         </div>
-                        @error('image')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'image'])
                         <div class="category-form__row">
                             @isset($category)
                                 <button type="submit">Зберегти зміни</button>

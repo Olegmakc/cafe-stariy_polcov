@@ -24,8 +24,8 @@ class ProductRequest extends FormRequest
 	public function rules()
 	{
 		return [
-			'category_id' => 'required',
 			'title' => 'required|string|min:3|max:255',
+			'category_id' => 'required',
 			'photo' => 'required|image|mimes:png,jpg,svg,jpeg',
 			'description' => 'nullable|string',
 			'weight' => 'required|numeric',
@@ -40,7 +40,7 @@ class ProductRequest extends FormRequest
 			'description.string' => 'Поле :attribute не повинно бути строкой',
 			'name.string' => 'Поле :attribute не повинно бути строкой',
 			'price.required' => 'Поле :attribute не повинно бути пустим',
-			'photo.required' => 'Продукт :attribute повинун мати зображення',
+			'photo.required' => 'Продукт повинун мати :attribute',
 			'min' => 'Поле :attribute повинно бути не менше як 3 символи',
 			'max' => 'Поле :attribute повинно бути не більше як 255 символи',
 		];
@@ -48,11 +48,11 @@ class ProductRequest extends FormRequest
 	public function attributes()
 	{
 		return [
-			'title' => 'назва продукту',
-			'weight' => 'вага (гр.)',
-			'price' => 'ціна (грн.)',
-			'description' => 'опис продукту',
-			'photo' => 'зображення продукту',
+			'title' => 'Назва продукту',
+			'weight' => 'Вага (грами)',
+			'price' => 'Ціна (грн.)',
+			'description' => 'Опис продукту',
+			'photo' => 'Зображення',
 
 		];
 	}

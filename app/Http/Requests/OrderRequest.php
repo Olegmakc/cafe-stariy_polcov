@@ -38,18 +38,17 @@ class OrderRequest extends FormRequest
 			'required' => 'Поле :attribute не повинно бути пустим',
 			'phone.digits' => 'Поле :attribute повинно мати 10 цифр',
 			'email.email' => 'Поле :attribute повинно бути коректного формату',
-			'min' => 'Поле :attribute повинно бути не менше як 3 символи',
-			'max' => 'Поле :attribute повинно бути не більше як 255 символи',
+			'min' => 'Поле :attribute повинно бути не менше 3-x символи',
+			'max' => 'Поле :attribute повинно бути не більше ніж 255 символи',
 		];
 	}
 	public function attributes()
 	{
 		return [
-			'name' => 'ім\'я',
+			'name' => 'Ім\'я',
 			'phone' => 'Номер телефону',
 			'destination_adress' => 'Адреса доставки',
 			'comment' => 'Коментар',
-
 		];
 	}
 }

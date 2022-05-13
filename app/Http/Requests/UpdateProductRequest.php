@@ -40,19 +40,20 @@ class UpdateProductRequest extends FormRequest
 			'description.string' => 'Поле :attribute не повинно бути строкой',
 			'name.string' => 'Поле :attribute не повинно бути строкой',
 			'price.required' => 'Поле :attribute не повинно бути пустим',
-			'photo.required' => 'Продукт :attribute повинун мати зображення',
-			'min' => 'Поле :attribute повинно бути не менше як 3 символи',
-			'max' => 'Поле :attribute повинно бути не більше як 255 символи',
+			'photo.required' => 'Продукт повинун мати :attribute',
+			'photo' => ':attribute повинно бути формату ( *.png, *.jpg, *.svg, *.jpeg )',
+			'min' => 'Поле :attribute повинно бути не менше 3-х символів',
+			'max' => 'Поле :attribute повинно бути не більше ніж 255 символи',
 		];
 	}
 	public function attributes()
 	{
 		return [
-			'title' => 'назва продукту',
-			'weight' => 'вага (гр.)',
-			'price' => 'ціна (грн.)',
-			'description' => 'опис продукту',
-			'photo' => 'зображення продукту',
+			'title' => 'Назва продукту',
+			'weight' => 'Вага (грами)',
+			'price' => 'Ціна (грн.)',
+			'description' => 'Опис продукту',
+			'photo' => 'Зображення',
 
 		];
 	}

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ResetController;
 
 Route::get('/', [MainController::class, 'index'])->name('index');
@@ -43,6 +44,7 @@ Route::group([
 	Route::resource('products', ProductController::class);
 
 	Route::get('category/fetch_data', [CategoryController::class, 'fetch_data'])->name('category.fetch_data');
+	Route::resource('users', UserController::class)->except(['create', 'store', 'show']);
 	Route::post('category/{id}/restore', [CategoryController::class, 'restore'])->name('category.restore');
 	Route::delete('category/{id}/forse_delete', [CategoryController::class, 'forceDelete'])->name('category.forceDelete');
 	Route::resource('category', CategoryController::class);

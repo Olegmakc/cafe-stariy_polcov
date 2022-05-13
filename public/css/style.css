@@ -1103,6 +1103,7 @@ body._lock {
 }
 
 .item-popup__title {
+	
 	flex: 0 1 70%;
 	font-size: 1.125rem;
 	line-height: 1.1666666667;
@@ -1115,15 +1116,17 @@ body._lock {
 .item-popup__price {
 	margin: 0 1.1rem;
 	white-space: nowrap;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 }
 
 .item-popup__clear {
+	margin-top: 2px;
 	transition: color 0.3s ease 0s;
 }
 
 .item-popup__clear::before {
-	font-size: 1.4rem;
+	color: #84c502;
+	font-size: 1.8rem;
 }
 
 .quantity-item-popup {
@@ -1148,18 +1151,21 @@ body._lock {
 
 .quantity-item-popup__minus {
 	transition: color 0.3s ease 0s;
+	margin-top: 2px;
 }
 
 .quantity-item-popup__minus::before,
 .quantity-item-popup__add::before {
-	font-size: 1.4rem;
+	
+	color: #84c502;
+	font-size: 1.8rem;
 }
-
-.quantity-item-popup__input {
-	margin: 0 15px;
+.quantity-item-popup__quantity {
+	margin: 0 18px;
+	font-size: 1.3rem;
 }
-
 .quantity-item-popup__add {
+	margin-top: 2px;
 	transition: color 0.3s ease 0s;
 }
 
@@ -3142,13 +3148,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 	.item-popup__title {
 		font-size: 0.875rem;
 	}
-
+	.quantity-item-popup__quantity{
+		margin: 0 0.4rem;
+		font-size: 0.9rem;
+	}
 	.item-popup__price {
 		margin: 0 0.625rem;
+		font-size: 0.9rem;
 	}
 
 	.item-popup__clear::before {
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 
 	.quantity-item-popup input {
@@ -3157,13 +3167,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 	.quantity-item-popup__minus::before,
 	.quantity-item-popup__add::before {
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
-
-	.quantity-item-popup__input {
-		margin: 0 10px;
+	.bascket__sum{
+		font-size: 16px;
 	}
-
 	.orderform__row label {
 		font-size: 1rem;
 	}
@@ -3268,12 +3276,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 		color: #ee6344;
 	}
 
-	.item-popup__title:hover {
-		text-decoration: underline;
-	}
 
 	.item-popup__clear:hover {
-		color: #ee6344;
+		color: rgb(128, 182, 21);
 	}
 
 	.quantity-item-popup__minus:hover {
@@ -3323,10 +3328,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 	}
 }
 .alert-danger {
-	color: rgba(252, 84, 84, 0.76);
-	font-size: 16px;
+	color: rgb(252, 84, 84);
+	font-size: 18px;
 	line-height: calc(21 / 16);
 	font-weight: 400;
+}
+.alert-danger:not(:last-child) {
+	margin: 0px 0px 5px 0px;
 }
 .alert-succes {
 	position: absolute;

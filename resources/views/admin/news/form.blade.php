@@ -25,43 +25,30 @@
                             <input type="text" name="slug" @error('slug')  @enderror id=""
                                 value="@isset($news) {{ $news->slug }}@else {{ old('slug') }} @endisset">
                         </div>
-                        @error('slug')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'slug'])
                         <div class="category-form__row">
                             <label for="title">Заголовок новини:</label>
                             <input type="text" name="title" id="title" @error('title')  @enderror
                                 value="@isset($news) {{ $news->title }}@else {{ old('title') }} @endisset">
                         </div>
-                        @error('title')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'title'])
                         <div class="category-form__row">
                             <label for="body">Текст новини:</label>
-                            <textarea name="body" id="" rows="10">
-@isset($news)
-{{ $news->body }}@else{{ old('body') }}
-@endisset
-</textarea>
+                            <textarea name="body" id="" rows="10">@isset($news){{ $news->body }}@else{{ old('body') }}@endisset</textarea>
                         </div>
-                        @error('title')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'body'])
                         <div class="category-form__row">
                             <label for="image" class="file-label">Зображення новини:</label>
                             <input type="file" class="file" name="image" @error('image')  @enderror
                                 value="{{ old('image') }}">
                         </div>
-                        @error('image')
-                            <div class="alert-danger">{{ $message }}</div>
-                        @enderror
+                        @include('admin.error.error', ['fieldName' => 'image'])
                         <div class="category-form__row">
                             @isset($news)
                                 <button type="submit">Зберегти зміни</button>
                             @else
                                 <button type="submit">Створити</button>
                             @endisset
-
                         </div>
                     </form>
                 </div>

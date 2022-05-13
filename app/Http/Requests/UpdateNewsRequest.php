@@ -30,4 +30,26 @@ class UpdateNewsRequest extends FormRequest
 			'image' => 'nullable|image|mimes:png,jpg,svg,jpeg',
 		];
 	}
+	public function messages()
+	{
+		return [
+			'slug.unique' => 'Такий :attribute вже існує, змініть та попробуйте знову!',
+			'required' => 'Поле :attribute не повинно бути пустим',
+			'title.min' => 'Поле :attribute повинно мати мінімум 5 символів!',
+			'title.max' => 'Поле :attribute повинно мати максимум 255 символів!',
+			'image' => ':attribute повинно бути формату ( *.png, *.jpg, *.svg, *.jpeg )',
+			'min' => 'Поле :attribute повинно бути не менше 3-х символів',
+			'max' => 'Поле :attribute повинно бути не більше як 255 символи',
+		];
+	}
+	public function attributes()
+	{
+		return [
+			'slug' => 'Код новини',
+			'title' => 'Заголовок новини',
+			'destination_adress' => 'Текс новини',
+			'image' => 'Зображення новини',
+
+		];
+	}
 }

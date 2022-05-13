@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Classes\Basket;
 use App\Events\OrderConfirmed;
 use App\Http\Requests\OrderRequest;
-use App\Mail\OrderConfirm;
 use App\Models\Product;
-use Illuminate\Support\Facades\Mail;
 
 use function Psy\debug;
 

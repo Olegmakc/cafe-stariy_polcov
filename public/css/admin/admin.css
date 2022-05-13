@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .actions-header__logout {
   font-size: 16px;
   color: #000;
@@ -21,7 +22,7 @@
   background-color: #fafafa;
 }
 .admin__background_form {
-  background-color: #0d9488;
+  background-color: #27045b;
 }
 
 .message_success {
@@ -125,8 +126,48 @@
   font-size: 16px;
   background-color: #f8f8f8;
 }
+.category-form input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+.category-form input[type=checkbox] {
+  display: none;
+}
+.category-form input[type=checkbox] + label:before {
+  content: "✔";
+  border: 0.1em solid #fff;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.6em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 1em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+.category-form input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+.category-form input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+.category-form input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+.category-form input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
 .category-form__row:not(:last-child) {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 15px 0px;
 }
 .category-form__row label {
   display: block;
