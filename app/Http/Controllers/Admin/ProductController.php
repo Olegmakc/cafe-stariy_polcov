@@ -23,7 +23,7 @@ class ProductController extends Controller
 			->when($request->has('archive'), function ($query) {
 				$query->onlyTrashed();
 			})
-			->paginate(7);
+			->paginate(10);
 
 		return view('admin.products.products', compact('products'));
 	}
