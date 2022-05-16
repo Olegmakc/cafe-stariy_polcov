@@ -15,21 +15,22 @@ Route::get('/', [MainController::class, 'index'])->name('index');
 Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/contact', [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('store');
+
 Route::get('/menu', [MainController::class, 'menu'])->name('menu');
 Route::get('/news', [MainController::class, 'news'])->name('news');
-Route::get('/news/{slug}', [MainController::class, 'newsArticle'])->name('news-Article');
+Route::get('/news/{slug}', [MainController::class, 'newsArticle'])->name('news.article');
 
-Route::get('/menu/fetch_data', [MainController::class, 'filterProducts'])->name('menu-Filter');
-Route::get('/menu/{category}', [MainController::class, 'menuCategory'])->name('menu-Category');
+Route::get('/menu/fetch_data', [MainController::class, 'filterProducts'])->name('menu.filter');
+Route::get('/menu/{category}', [MainController::class, 'menuCategory'])->name('menu.category');
 Route::get('/reset', ResetController::class)->name('reset');
 
 Route::group(['prefix' => 'basket'], function () {
-	Route::post('/add/{product}', [BasketController::class, 'basketAdd'])->name('basketAdd');
+	Route::post('/add/{product}', [BasketController::class, 'basketAdd'])->name('basket.add');
 
 	Route::group(['middleware' => 'basket_not_empty'], function () {
 		Route::get('/', [BasketController::class, 'index'])->name('basket');
-		Route::post('/remove/{product}', [BasketController::class, 'basketRemove'])->name('basketRemove');
-		Route::post('/removeAll/{product}', [BasketController::class, 'basketRemoveAll'])->name('basketRemoveAll');
+		Route::post('/remove/{product}', [BasketController::class, 'basketRemove'])->name('basket.remove');
+		Route::post('/removeAll/{product}', [BasketController::class, 'basketRemoveAll'])->name('basket.remove-all');
 		Route::post('/', [BasketController::class, 'basketConfirm'])->name('basketConfirm');
 	});
 });

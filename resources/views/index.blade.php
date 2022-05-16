@@ -27,7 +27,7 @@
                         <div class="content-slider__text">Гостинний ресторан Старий полковник нікого не залишить
                             байдужим! Смачна авторська кухня, першокласне обслуговування, гостинна атмосфера.
                         </div>
-                        <a href="" class="content-slider__button _btn">Дізнатись більше</a>
+                        <a href="{{ route('about') }}" class="content-slider__button _btn">Дізнатись більше</a>
                     </div>
                 </div>
                 <div class="slider-main__slider main-slider">
@@ -79,7 +79,7 @@
                                     <button type=" button"
                                         class="slider__arrow_next slider-arow slider-arow_next _icon-arrow-down"></button>
 
-                                    <a href="{{ route('menu-Category', $category->code) }}"
+                                    <a href="{{ route('menu.category', $category->code) }}"
                                         class="products-slider__more"><span class="products-slider__text">Дивитись
                                             меню</span>
                                         <span class="products-slider__text-sm">Ще</span>

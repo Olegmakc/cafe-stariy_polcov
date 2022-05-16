@@ -22,7 +22,7 @@
   background-color: #fafafa;
 }
 .admin__background_form {
-  background-color: #27045b;
+  background-color: #6b7280;
 }
 
 .message_success {
@@ -334,18 +334,18 @@
 }
 
 .bascket {
-  padding-top: 130px;
+  padding-top: 30px;
   padding-bottom: 30px;
   background-color: #f1f5f9;
 }
 @media (max-width: 767.98px) {
   .bascket {
-    padding-top: 100px;
+    padding-top: 25px;
   }
 }
 @media (max-width: 478.98px) {
   .bascket {
-    padding-top: 90px;
+    padding-top: 20px;
   }
 }
 .bascket__alert {
@@ -356,14 +356,20 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #fff;
   font-weight: 500;
   margin: 0px 0px 20px 0px;
 }
+@media (max-width: 768.98px) {
+  .bascket__alert {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+}
 @media (max-width: 478.98px) {
   .bascket__alert {
-    font-size: 16px;
+    font-size: 0.875rem;
     line-height: 1.1;
   }
 }
@@ -374,15 +380,25 @@
   background: rgba(163, 194, 130, 0.753);
 }
 .bascket__block {
-  font-family: "Roboto";
+  font-family: "Gilroy";
 }
 .bascket__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.125;
   font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .bascket__title:not(:last-child) {
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 25px 0px;
+}
+@media (max-width: 768.98px) {
+  .bascket__title {
+    font-size: 1.3rem;
+  }
+}
+.bascket__title:not(:last-child) {
+  margin: 0px 0px 20px 0px;
 }
 .bascket__items {
   margin: 0px 0px 20px 0px;
@@ -404,6 +420,11 @@
 .bascket__sum {
   margin: 0px 0px 20px 0px;
 }
+@media (max-width: 478.98px) {
+  .bascket__sum {
+    margin: 0px 0px 15px 0px;
+  }
+}
 .bascket__btn {
   display: inline-flex;
   align-items: center;
@@ -413,13 +434,40 @@
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
-  padding: 0 40px;
-  background: #2acc1b;
+  padding: 0 50px;
+  background-color: #2acc1b;
+  transition: background-color 0.3s ease 0s;
 }
 @media (max-width: 767.98px) {
   .bascket__btn {
     font-size: 16px;
     padding: 0 30px;
+  }
+}
+@media (max-width: 478.98px) {
+  .bascket__btn {
+    display: flex;
+  }
+}
+@media (any-hover: hover) {
+  .bascket__btn:hover {
+    background-color: #22ad15;
+  }
+}
+.bascket__back_link {
+  display: inline-block;
+  font-size: 1rem;
+  transition: color 0.3s ease 0s;
+}
+@media (max-width: 478.98px) {
+  .bascket__back_link:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+  }
+}
+@media (any-hover: hover) {
+  .bascket__back_link:hover {
+    text-decoration: underline;
+    color: #ee6344;
   }
 }
 

@@ -20,14 +20,14 @@
             <div class="news__body">
                 @foreach ($news as $newsItem)
                     <div class="news__item item-news">
-                        <a href="{{ route('news-Article', $newsItem->slug) }}" class="item-news__image ibg">
+                        <a href="{{ route('news.article', $newsItem->slug) }}" class="item-news__image ibg">
                             <img src="{{ Storage::url($newsItem->image) }}" alt="">
                         </a>
                         <div class="item-news__body">
-                            <a href="{{ route('news-Article', $newsItem->slug) }}"
+                            <a href="{{ route('news.article', $newsItem->slug) }}"
                                 class="item-news__title">{{ Str::of($newsItem->title)->words(10) }}</a>
                             <div class="item-news__text">{{ Str::of($newsItem->body)->words(25) }}</div>
-                            <a href="" class="item-news__more">Детальніше</a>
+                            <a href="{{ route('news.article', $newsItem->slug) }}" class="item-news__more">Детальніше</a>
                         </div>
                     </div>
                 @endforeach

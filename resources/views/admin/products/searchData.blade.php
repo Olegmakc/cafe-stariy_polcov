@@ -65,5 +65,5 @@
     </tr>
 @endforelse
 <tr>
-    <td colspan="2" align="center"><span class="pagination">{!! $products->links() !!}</span></td>
+    <td colspan="2" align="center"><span class="pagination">{{ $products->onEachSide(1)->links() }}</span></td>
 </tr>
