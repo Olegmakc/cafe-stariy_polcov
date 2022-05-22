@@ -18,7 +18,7 @@
 
         </div>
         <div class="card-product__footer product-footer">
-            <form action="{{ route('basketAdd', $product) }}" method="POST">
+            <form action="{{ route('basket.add', $product) }}" method="POST">
                 @csrf
                 <button type="submit" data-id="{{ $product->id }}" class="product-footer__button _icon-cart"><span>В
                         кошик</span></button>
