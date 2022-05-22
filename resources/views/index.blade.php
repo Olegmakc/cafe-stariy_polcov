@@ -27,7 +27,7 @@
                         <div class="content-slider__text">Гостинний ресторан Старий полковник нікого не залишить
                             байдужим! Смачна авторська кухня, першокласне обслуговування, гостинна атмосфера.
                         </div>
-                        <a href="" class="content-slider__button _btn">Дізнатись більше</a>
+                        <a href="{{ route('about') }}" class="content-slider__button _btn">Дізнатись більше</a>
                     </div>
                 </div>
                 <div class="slider-main__slider main-slider">
