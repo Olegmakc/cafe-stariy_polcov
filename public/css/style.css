@@ -2869,20 +2869,32 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 		z-index: 5;
 	}
+	.menu-header__list{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
 	.menu-header__item:not(:last-child) {
 		margin: 0px 0px 15px 0px;
 	}
 
 	.menu-header__link {
-		font-size: 1.375rem;
+		font-size: 1.4rem;
 		padding: 0;
+	}
+	.phones-header__link {
+		font-size: 1.1rem;
 	}
 
 	.phones-header__list {
 		min-width: 13.75rem;
 		transform: translate(0, 5px);
 		right: 0;
+	}
+	.phones-header__label{
+		font-size: 0.875rem;
 	}
 
 	.icon-menu {
@@ -3113,7 +3125,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 	.header__logo {
 		flex: 0 0 60px;
 	}
-
+	.menu-header__link {
+		font-size: 1.3rem
+	}
 	.slider-main {
 		padding-top: 4.0625rem;
 	}
