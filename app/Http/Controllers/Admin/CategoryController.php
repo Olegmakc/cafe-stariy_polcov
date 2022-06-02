@@ -13,7 +13,7 @@ class CategoryController extends Controller
 	/**
 	 * Display a listing of the resource.
 	 *
-	 * @return \Illuminate\Http\Response
+	 * @return \Illuminate\Http\Request
 	 */
 	public function index(Request $request)
 	{
@@ -23,11 +23,6 @@ class CategoryController extends Controller
 		return view('admin.categories.categories', compact('categories'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
 	public function create()
 	{
 		return view('admin.categories.form');
@@ -37,7 +32,6 @@ class CategoryController extends Controller
 	 * Store a newly created resource in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
-	 * @return \Illuminate\Http\Response
 	 */
 	public function store(StoreCategoryRequest $request)
 	{
@@ -77,7 +71,6 @@ class CategoryController extends Controller
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  \Illuminate\Http\Request  $request
 	 * @param  \App\Models\Category  $category
 	 * @return \Illuminate\Http\Response
 	 */

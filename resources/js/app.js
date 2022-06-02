@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 	$('#orderForm').on('submit', function (e) {
 		e.preventDefault();
@@ -8,7 +7,6 @@ $(document).ready(function () {
 		let destination_adress = $('#destination_adress').val();
 		let comment = $('#comment').val();
 		let payment = $("input[type='radio'][name='payment']:checked").val();
-		console.log(payment);
 		$.ajax({
 			url: "/basket",
 			type: "POST",
@@ -275,3 +273,4 @@ $(document).ready(function () {
 	}
 	//===========</NEWS>================================================================================
 });
+require('./bootstrap');
