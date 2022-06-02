@@ -55,13 +55,13 @@
 						@foreach ($news as $newsArticle)
 						<div class="slider-news__slide swiper-slide">
 							<div class="news__item item-news">
-								<a href="{{route('news-Article',$newsArticle->slug)}}" class="item-news__image ibg">
+								<a href="{{route('news.article',$newsArticle->slug)}}" class="item-news__image ibg">
 									<img src="{{Storage::url($newsArticle->image)}}" alt="">
 								</a>
 								<div class="item-news__body">
-									<a href="{{route('news-Article',$newsArticle->slug)}}" class="item-news__title">{{$newsArticle->title}}</a>
+									<a href="{{route('news.article',$newsArticle->slug)}}" class="item-news__title">{{$newsArticle->title}}</a>
 									<div class="item-news__text">{{Str::of($newsArticle->body)->words(25);}}</div>
-									<a href="{{route('news-Article',$newsArticle->slug)}}" class="item-news__more">Детальніше</a>
+									<a href="{{route('news.article',$newsArticle->slug)}}" class="item-news__more">Детальніше</a>
 								</div>
 							</div>
 						</div>

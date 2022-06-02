@@ -17,7 +17,7 @@
 .admin__background {
 	background-color: #fafafa;
 	&_form {
-		background-color: #27045b;
+		background-color: #6b7280;
 	}
 }
 //===========================================================================================
@@ -381,14 +381,14 @@
 
 //===========================================================================================
 .bascket {
-	padding-top: 130px;
+	padding-top: 30px;
 	padding-bottom: 30px;
 	background-color: #f1f5f9;
 	@media (max-width: 767.98px) {
-		padding-top: 100px;
+		padding-top: 25px;
 	}
 	@media (max-width: 478.98px) {
-		padding-top: 90px;
+		padding-top: 20px;
 	}
 	// .bascket__alert
 	&__alert {
@@ -399,12 +399,16 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 10px;
-		font-size: 18px;
+		font-size: 1.125rem;
 		color: #fff;
 		font-weight: 500;
 		margin: 0px 0px 20px 0px;
+		@media (max-width: 768.98px){
+			font-size: 1rem;
+			line-height: 1.1;
+		}
 		@media (max-width: 478.98px){
-			font-size: 16px;
+			font-size: 0.875rem;
 			line-height: 1.1;
 		}
 	}
@@ -416,18 +420,27 @@
 	}
 	// .bascket__block
 	&__block {
-		font-family: "Roboto";
+		font-family: 'Gilroy';
 	}
 	// .bascket__content
 	&__content {
 	}
 	// .bascket__title
 	&__title {
-		font-size: 24px;
+		font-size: 1.5rem;
 		line-height: calc(27 / 24);
 		font-weight: 600;
+		padding-bottom: 15px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 		&:not(:last-child) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 25px 0px;
+		}
+		@media (max-width: 768.98px){
+			font-size: 1.3rem;
+			
+		}
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
 		}
 	}
 	// .bascket__items
@@ -455,6 +468,9 @@
 	// .bascket__sum
 	&__sum {
 		margin: 0px 0px 20px 0px;
+		@media (max-width: 478.98px){
+			margin: 0px 0px 15px 0px;
+		}
 	}
 	// .bascket__btn
 	&__btn {
@@ -466,13 +482,42 @@
 		font-weight: 500;
 		font-size: 18px;
 		border-radius: 5px;
-		padding: 0 40px;
-		background: #2acc1b;
+		padding: 0 50px;
+		background-color: #2acc1b;
+		transition: background-color 0.3s ease 0s;
 		@media (max-width: 767.98px) {
 			font-size: 16px;
 			padding: 0 30px;
 		}
+		@media (max-width: 478.98px){
+			display: flex;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				background-color: #22ad15;
+			}
+			}
 	}
+		// .bascket__back
+		&__back {
+			// .bascket__back_link
+			&_link {
+				display: inline-block;
+				font-size: 1rem;
+				transition: color 0.3s ease 0s;
+				@media (max-width: 478.98px){
+					&:not(:last-child){
+						margin: 0px 0px 5px 0px;
+					}
+				}
+				@media (any-hover: hover){
+					&:hover{
+						text-decoration: underline;
+						color: #ee6344;
+					}
+				}
+			}
+		}
 }
 //===========================================================================================
 .order {

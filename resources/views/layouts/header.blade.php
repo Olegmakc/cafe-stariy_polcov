@@ -8,16 +8,32 @@
                 <div class="header__menu menu-header">
                     <nav class="menu-header__body">
                         <ul class="menu-header__list">
-                            <li class="menu-header__item"><a href="{{ route('index') }}"
-                                    class="menu-header__link">Головна</a></li>
-                            <li class="menu-header__item"><a href="{{ route('menu') }}"
-                                    class="menu-header__link">Меню</a></li>
-                            <li class="menu-header__item"><a href="{{ route('about') }}" class="menu-header__link">Про
-                                    нас</a></li>
-                            <li class="menu-header__item"><a href="{{ route('contact') }}"
-                                    class="menu-header__link">Контакти</a></li>
-                            <li class="menu-header__item"><a href="{{ route('news') }}"
-                                    class="menu-header__link">Новини</a></li>
+                            <li class="menu-header__item">
+                            <a href="{{ route('index') }}" 
+                                  class="menu-header__link {{ request()->routeIs('index') ? 'active' : '' }}">
+                                  Головна</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="{{ route('menu') }}"
+                                    class="menu-header__link {{ request()->routeIs('menu*') ? 'active' : '' }}">
+                                    Меню</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="{{ route('about') }}"
+                                    class="menu-header__link {{ request()->routeIs('about') ? 'active' : '' }}">
+                                    Про нас</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="{{ route('contact') }}"
+                                    class="menu-header__link {{ request()->routeIs('contact') ? 'active' : '' }}">
+                                    Контакти</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="{{ route('news') }}"
+                                    class="menu-header__link {{ request()->routeIs('news*') ? 'active' : '' }}">
+                                    Новини
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>

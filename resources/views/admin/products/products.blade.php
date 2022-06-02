@@ -4,7 +4,7 @@
             <div class="product__block product ">
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight bg-gray-200">
-                        {{ __('Всього продуктів:') }}
+                        {{ __('Всього продуктів:') }} {{ $products->total() }}
                     </h2>
                 </x-slot>
                 @if (@session()->has('success'))
