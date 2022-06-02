@@ -9,9 +9,9 @@
                     <nav class="menu-header__body">
                         <ul class="menu-header__list">
                             <li class="menu-header__item">
-                            <a href="{{ route('index') }}" 
-                                  class="menu-header__link {{ request()->routeIs('index') ? 'active' : '' }}">
-                                  Головна</a>
+                                <a href="{{ route('index') }}"
+                                    class="menu-header__link {{ request()->routeIs('index') ? 'active' : '' }}">
+                                    Головна</a>
                             </li>
                             <li class="menu-header__item">
                                 <a href="{{ route('menu') }}"
@@ -52,7 +52,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <a href="{{ route('basket') }}" class="actions-header__link actions-header__link_cart _icon-cart">
+                        <a href="{{ route('basket') }}"
+                            class="actions-header__link actions-header__link_cart _icon-cart">
                             @isset($order)
                                 @if ($order->products->count() > 0)
                                     <span>
@@ -61,8 +62,6 @@
                                 @endif
                             @endisset
                         </a>
-                        <li class="actions-header__item"><a href="{{ route('login') }}"
-                                class="actions-header__link">Вхід</a></li>
                     @endguest
                     @auth
                         <li class="actions-header__item">

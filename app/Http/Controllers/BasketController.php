@@ -34,7 +34,7 @@ class BasketController extends Controller
 			);
 
 			if ($result) {
-				session()->put('successful', 'Ваше замовлення прийняте в обробку!');
+				session()->put('successful', 'Ваше замовлення прийняте в обробку. Наш менеджер зв\'яжеться з вами!');
 				OrderConfirmed::dispatch($order);
 				return response()->json(['status' => true, "redirect_url" => url('index')]);
 			} else {
